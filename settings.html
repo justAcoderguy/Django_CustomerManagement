@@ -34,17 +34,29 @@
     </nav>
 
     <div class="container gap"></div>
-    <div class="container col-xs-4 col-xs-offset-4">
-        <table class="table table-striped table-bordered">
-            <tbody>
-                <tr><th><center>Item Number</center></th><th><center>Item Name</center></th><th><center>Price</center></th><th><center> </center></th></tr>
-                <tr><td><center>    </center></td><td><center>  </center></td><td><center>  </center></td></tr>
-                <tr><td><center>    </center></td><td><center>Total</center></td><td><center>Rs.0/-</center></td><td><center><a href="success.html"><button type="submit" name="submit" class="btn btn-primary">Confirm Order</button></a></center></td></tr>
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-4">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <p><h1><strong>Change Password</strong></h1></p>
+                        <form>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Old Password" name="old-password" required="true">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="New Password" name="new-password" required="true">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Re-type New Password" name="password" required="true">
+                            </div>
+                            <button type="submit" name="submit" class="btn btn-primary">Change</button><br><br>
+                        </form><br>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container gap"></div>
-    <div class="container gap"></div>
     <div class="container gap"></div>
     <div class="container gapf"></div>
 
@@ -54,6 +66,5 @@
             <center>Copyright © Lifestyle Store. All Rights Reserved | Contact Us: +91 90000 00000</center>
         </div>
     </footer>
-    
 </body>
 </html>
