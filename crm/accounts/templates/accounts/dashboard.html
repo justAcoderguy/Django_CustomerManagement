@@ -1,5 +1,5 @@
-{% extends "accounts/main.html" %}
-
+{% extends 'accounts/main.html' %}
+{% load static %}
 
 {% block content %}
 {% include "accounts/stats.html" %}
@@ -26,7 +26,6 @@
                 </tr>
             {% endfor %}
 
-           
             </table>
         </div>
     </div>
@@ -35,7 +34,7 @@
         <h5>LAST 5 ORDERS</h5>
         <hr>
         <div class="card card-body">
-            <a class="btn btn-primary  btn-sm btn-block" href="">Create Order</a>
+            <a class="btn btn-primary  btn-sm btn-block" href="{% url 'create_order' %}">Create Order</a>
             <table class="table table-sm">
                 <tr>
                     <th>Product</th>
