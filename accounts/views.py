@@ -35,10 +35,10 @@ def customer(request, pk):
     return render(request, 'accounts/customer.html', context)
 
 def createOrder(request, pk):
-    OrderFormSet = inlineformset_factory(Customer, Order, fields=('product','status')) # (parentModel,... 
+    OrderFormSet = inlineformset_factory(Customer, Order, fields=('product','status'), extra=7) # (parentModel,... 
     # ...childModel, fields allowed from child model )
     customer =Customer.objects.get(id=pk)
-    formset = OrderFormSet(instance=customer)
+    formset = OrderFormSet(queryset = Order.objects.none(),instance=customer)
     # form = OrderForm(initial={'customer':customer})
     if request.method == 'POST':
         # form = OrderForm(request.POST)
