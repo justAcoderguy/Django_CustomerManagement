@@ -10,8 +10,11 @@
 			<h5>Fill in the details  :</h5>
 			<form action="" method="POST">
 				{% csrf_token %}
-				{{form}}
-				
+				{{ formset.management_form }}
+				{% for form in formset %}
+					{{form}}
+					<hr>
+				{% endfor %}
 				<input class="btn btn-sm btn-success" type="submit" name="Submit" >
 			</form>
 
