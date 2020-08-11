@@ -1,9 +1,7 @@
-from django.forms import ModelForm
-from .models import Order
+import django_filters
+from .models import *
 
-
-class OrderForm(ModelForm):
+class OrderFilter(django_filters.FilterSet):
     class Meta:
-        model = Order # Tells us which model this form is built for
-        fields = '__all__' # Saying that create a form with all of Order Models fields otherwise use a list ['']
-        
+        model = Order
+        fields = "__all__"
